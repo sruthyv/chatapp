@@ -1,15 +1,18 @@
 <div class="row">
   <div class="col-md-2">
-    <h5> Hi <%= @current_user.username %> </h5>
-    <h4> Users </h4>
+    <p><h1> Hi <%= link_to @current_user.username, @current_user %> </h1></p>
+    <h4> Channel Members </h4>
     <div>
       <%= turbo_stream_from "users" %>
       <div id="users">
         <%= render @users %>
       </div>
     </div>
+    <hr>
     <h4> Rooms </h4>
-    <%= render partial: "layouts/new_room_form" %>
+    <% unless @rooms.count >= 1 %>
+      <%= render partial: "layouts/new_room_form" %>
+    <% end %>
     <div>
       <%= turbo_stream_from "rooms" %>
       <div id="rooms">
