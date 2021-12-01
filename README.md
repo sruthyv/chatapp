@@ -1,24 +1,33 @@
-# README
+# Sapaad.Online V3
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sapaad.Online V3 is a rails react application
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+1. Clone the repo
 
-* System dependencies
+   ```
+   $ git clone git@github.com:sruthyv/chatapp.git
+   $ cd chatapp
+   ```
 
-* Configuration
+2. Install dependencies
 
-* Database creation
+   ```
+   $ bundle install
+   ```
 
-* Database initialization
+3. Create and setup the database
 
-* How to run the test suite
+   ```
+   $ rails db:create
+   $ rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+   ```
 
-* Deployment instructions
+4. Run application locally
 
-* ...
+   ```
+   $ rails s
+
+   ```
